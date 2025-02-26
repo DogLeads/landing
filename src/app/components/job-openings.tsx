@@ -7,7 +7,7 @@ import GradientBorderCard from './ui/gradient-border-card';
 export default function JobOpenings() {
 
     return (
-        <section className="relative flex w-full pb-20 bg-[#F9F9FF]">
+        <section className="relative flex w-full pb-20 bg-[#F9F9FF] dark:bg-[#1a1c1f]">
             
             <div className=" flex flex-col justify-center items-center
                 w-full rounded-[90px] p-6 z-10 ">

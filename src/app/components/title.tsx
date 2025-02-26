@@ -40,7 +40,7 @@ export default function Title({title, description, descriptionAnimated, gradient
 		>
 		
 		{title ? 
-			<h1 className="mb-4 text-5xl md:text-6xl">
+			<h1 className="mb-4 text-[40px] sm:text-5xl md:text-6xl">
 				{title.length === 1 ? <GradientText variant='purple'> {title[0]} </GradientText> : title[0]}
 				{title[gradientIndex] ? <GradientText variant='purple'> {title[gradientIndex]} </GradientText> : null}
 				{title[2] ? title[2] : null}
@@ -48,7 +48,7 @@ export default function Title({title, description, descriptionAnimated, gradient
 		: null}
 		{
 			descriptionAnimated ? 
-			<div className="text-black mb-6 text-md font-semibold inline-flex flex-col sm:flex-row whitespace-pre-wrap ">
+			<div className="mb-6 text-md font-semibold inline-flex flex-col sm:flex-row whitespace-pre-wrap ">
 				<p>{descriptionAnimated[0]}</p>
 				
 				<Typewriter
@@ -67,7 +67,7 @@ export default function Title({title, description, descriptionAnimated, gradient
 			{description}
 			</p>
 		}
-		<div className='flex gap-4'>
+		<div className='flex flex-wrap items-center justify-center gap-4'>
 			<ButtonCustom variant='outline' onClick={newTab ? 
 				() => window.open(route, '_blank', 'noopener,noreferrer') : 
 				() => router.push(route ? route : '/')}>

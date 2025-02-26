@@ -34,7 +34,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
         <div
             ref={modalRef}
-            className="bg-white rounded-lg p-2 md:p-4 lg:p-6 w-full max-w-6xl shadow-lg"
+            className="bg-white dark:bg-dark rounded-lg p-2 md:p-4 lg:p-6 w-full max-w-6xl shadow-lg"
         >
             <button
             onClick={onClose}

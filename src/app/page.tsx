@@ -2,11 +2,10 @@ import Cta from "./components/cta";
 import Demo from "./components/demo";
 import Title from "./components/title";
 import CtaMinor from "./components/cta-minor";
-import UspList from "./components/usp-list";
+import UspList from "./components/usp/usp-list";
 import PricingTiers from "./components/pricing-tiers";
 import ClientList from "./components/client-list";
 import WhyChooseUs from "./components/why-choose-us";
-import Image from "next/image";
 import { Metadata } from 'next';
 import Featured from "./components/featured";
 
@@ -36,7 +35,7 @@ export const metadata: Metadata = {
 export default function Home() {
 
 	return (
-		<main className="flex min-h-screen flex-col gap-8 sm:gap-10 md:gap-20 items-center pt-14 sm:pt-24 ">
+		<main className="flex min-h-screen flex-col gap-8 sm:gap-10 md:gap-20 items-center sm:pb-10 pt-10 sm:pt-20 ">
 			{/* Background Image */}
 			
 

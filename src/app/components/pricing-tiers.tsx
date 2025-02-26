@@ -18,7 +18,7 @@ function PricingCard(props: PricingCardProps) {
     const router = useRouter();
 
     return (
-        <div className="relative rounded-15 bg-[#EEF2F6] shadow-md py-8 px-[43px]
+        <div className="relative rounded-15 bg-[#EEF2F6] dark:bg-[#292e32] shadow-md py-8 px-[43px]
             transition-all hover:z-10 duration-500 hover:scale-105 hover:shadow-xl
             max-w-[410px] w-full h-[617px] flex flex-col justify-between">
             <div>
@@ -72,8 +72,8 @@ export default function PricingTiers() {
                 Reach out to our sales team to try ClimateForge today.
             </p>
 
-            <div className="relative flex items-center w-[282px] h-[71px] p-2 mb-[39px]
-                border border-primary rounded-full overflow-hidden">
+            <div className="relative flex items-center w-[282px] h-[71px] p-2 mb-[39px] gap-1
+                gradient-border rounded-full overflow-hidden">
                 {['Monthly', 'Yearly'].map((option, index) => {
                     const isActive = (index === 1) === isYearly; // Maps true for "Yearly" when isYearly is true
                     return (
@@ -87,7 +87,7 @@ export default function PricingTiers() {
                         )}
                         <button onClick={() => setIsYearly(index === 1)}
                             className={`flex w-full h-[55px] text-lg justify-center  items-center rounded-full font-bold relative z-10  
-                                ${isActive ? 'text-white pointer-events-none' : 'text-primary hover:bg-[#ffffffbc] hover:bg-accent-gradient-opaque hover:overflow-clip hover:border hover:border-primary'}`
+                                ${isActive ? 'text-white pointer-events-none' : 'text-primary dark:text-white hover:bg-[#ffffffbc] dark:hover:bg-[#212529ca] hover:bg-accent-gradient-opaque hover:overflow-clip hover:border hover:border-primary dark:hover:border-white'}`
                             }
                         >
                         {option}

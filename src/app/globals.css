@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-	--background: #F9F9FF;
+	--background: #FFF;
     --foreground: #212529;
 }
 
 body {
 	/* color: rgb(var(--foreground-rgb)); */
 	/* background: radial-gradient(257.3% 141.42% at 0% 0%, #F9F3F1 0%, #F7EEDE 100%), rgb(var(--background-start-rgb)); */
-	@apply bg-gradient-repeating text-[--foreground];
+	@apply bg-[--background] text-[--foreground] dark:bg-[--foreground] dark:text-[--background];
 }
 
 .backface-hidden {

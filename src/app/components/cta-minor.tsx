@@ -55,19 +55,6 @@ const middleVariants: Variants = {
     }
 };
 
-const ctaVariants: Variants = {
-    offscreen: {
-        scale: .5,
-    },
-    onscreen: {
-        opacity: 1,
-        scale: 1,
-    transition: {
-        type: "spring", damping: 30, stiffness: 200
-    }
-    }
-};
-
 const infoBoxData = [
     {
         svgSrc: "/cta-minor/precision.svg",
@@ -98,10 +85,10 @@ type InfoBoxProps = {
 }
 function InfoBox({svgSrc, title, text}: InfoBoxProps) {
     return (
-        <div className="flex flex-col justify-evenly max-w-[305px] rounded-15 p-4 lg:p-8 
+        <div className="flex flex-col justify-evenly max-w-[350px] lg:max-w-[305px] rounded-15 p-4 lg:p-8 
             border-solid border border-[#E0DFE2]">
             <Image className="w-6 h-6 lg:w-9 lg:h-9" src={svgSrc} alt="" width={36} height={36}/>
-            <h4 className="text-[#858585] text-base sm:text-lg md:text-xl lg:text-2xl overflow-ellipsis overflow-hidden">{title}</h4>
+            <h4 className="text-[#858585] dark:text-[#cecece] text-base sm:text-lg md:text-xl lg:text-2xl overflow-ellipsis overflow-hidden">{title}</h4>
             <p className="text-sm lg:text-base">{text}</p>
         </div>
     )
@@ -115,12 +102,12 @@ export default function CtaMinor() {
             
             {/** CTA container - gradient border, absolute position*/}
                 <div className="flex relative flex-col justify-center items-center text-center 
-                    px-4 sm:px-12 max-h-[488px] py-8 min-h-[500px] ">
+                    px-4 sm:px-12 max-h-[488px] py-8 min-h-[500px] gap-10">
                     
-                    <h2 className=" relative leading-snug">
+                    <h2 className="max-w-[820px] relative leading-snug">
                         Empowering <GradientText>American Businesses</GradientText> to Sell More Energy Upgrades
                     </h2>
-                    <p className="text-base sm:text-lg max-w-[666px] pb-10 font-medium">
+                    <p className="text-base sm:text-lg max-w-[666px] font-medium">
                         Identify the optimal residential heating and cooling for efficiency, deploy Solar, HVAC, and energy storage systems and make real money faster.
                     </p>
                     <div className="flex gap-[18px]">
@@ -134,7 +121,7 @@ export default function CtaMinor() {
                     
                 </div>
             
-            <div className="flex flex-col md:flex-row w-full justify-center gap-4 lg:gap-8">
+            <div className="flex flex-col md:flex-row w-full justify-center gap-4 lg:gap-8 pt-10 lg:pt-20">
             {/* Image Container */}
             <GradientBorderBox borderRadius={16}
                 className="bg-[#f4fafd] rounded-15 h-[420px] lg:h-[559px]"

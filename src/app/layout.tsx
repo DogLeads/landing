@@ -4,6 +4,7 @@ import Header from "./components/header";
 import { dmSans } from "./fonts";
 import "./globals.css";
 import Template from "./template";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
 	icons: [
@@ -38,11 +39,13 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html suppressHydrationWarning lang="en">
 			<body className={`${dmSans.className} text-body`}>
-				<Header />
-					<Template>{children}</Template>
-				<Footer />
+				<ThemeProvider attribute="class" enableSystem>
+					<Header />
+						<Template>{children}</Template>
+					<Footer />
+				</ThemeProvider>
 			</body>
 		</html>
 	);

@@ -20,7 +20,7 @@ export default function GradientBorderCard({width, height, borderRadius, borderW
                 width: width ? `${width}px` : '100%',
             }}
         >
-            <div className={`${fgStyle} w-full bg-[white] overflow-clip`}
+            <div className={`${fgStyle} w-full bg-[white] dark:bg-[#212529] overflow-clip`}
                 
                 style={{
                     borderRadius: `${borderRadius && borderRadius > 2 ? borderRadius - 2 : 0}px`,

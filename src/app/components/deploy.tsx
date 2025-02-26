@@ -62,7 +62,7 @@ export default function Deploy() {
                     {/* Backdrop with Icon and Text */}
                     <div
                     className="absolute inset-0 flex flex-col justify-center items-center 
-                    bg-[#c3cdd6ba] backdrop-blur-[4px] p-2
+                    bg-[#c3cdd6ba] dark:bg-[#7e8893b2] backdrop-blur-[4px] p-2
                     transition-all duration-300 rounded-[20px] 
                     group-hover:top-6 group-hover:left-6 group-hover:right-6 group-hover:bottom-auto 
                     group-hover:rounded-[15px] group-hover:min-h-[70px] "

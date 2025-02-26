@@ -1,4 +1,3 @@
-import TitleBackground from '../title-background';
 import Title from "../components/title";
 import JobOpenings from "../components/job-openings";
 import OurTeam from "../components/our-team";
@@ -42,13 +41,13 @@ export default function Careers() {
         },
         {
             title: "Mitigate the damage",
-            description: "Rising temperatures, fires, droughts, and storms are escalating. We’re accelerating the deployment of energy upgrades systems to save the planet and slow the consequences of our dumb choices.",
+            description: "Rising temperatures, fires, droughts, and storms are escalating. We're accelerating the deployment of energy upgrades systems to save the planet and slow the consequences of our dumb choices.",
             icon: "icon9",
         },
     ]
     
     return (
-        <main className="flex min-h-screen flex-col items-center py-12 pt-14 sm:pt-24">
+        <main className="flex min-h-screen flex-col items-center sm:pb-10 pt-10 sm:pt-20">
             
             {/* title card and CTA */}
 			<Title title={["Make an", "Impact in the World!"]} 
@@ -63,7 +62,7 @@ export default function Careers() {
                 <div className='absolute inset-0 bg-[url(/job-openings/solar-panels.webp)] bg-cover bg-center -z-10'></div>
                 
                 {/* Overlay */}
-                <div className='absolute inset-0 bg-[#ECF5FF] opacity-[0.93] -z-10'></div>
+                <div className='absolute inset-0 bg-[#ECF5FF] dark:bg-[#212529] opacity-[0.93] -z-10'></div>
 
                 {/* Content */}
                 <InfoCardGrid 

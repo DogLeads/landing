@@ -65,9 +65,9 @@ export default function BarGraphCard({barGraphData}: Props) {
             </svg>
             
             {/* Graph */}
-            <div className='flex justify-center items-center relative pt-6 mb-8 '>
+            <div className='flex justify-center items-center relative pt-2 sm:pt-6 mb-4 sm:mb-8 '>
                 
-                <div className='w-full max-w-[473px] z-10 h-[155px] '>
+                <div className='w-full max-w-[473px] z-10 h-[135px] sm:h-[155px] '>
                     <motion.div  key={JSON.stringify(barData)}
                         initial="offscreen"
                         whileInView="onscreen"  
@@ -111,33 +111,24 @@ export default function BarGraphCard({barGraphData}: Props) {
 
                 
             </div>
-            <div className='flex gap-x-4 justify-between text-[10px] sm:text-small'>
-                
-                <span className=''>0</span>
+            <div className="relative w-full flex justify-between text-[10px] sm:text-small">
+                {/* Min Value (0) */}
+                <span className="relative">0</span>
 
-                <div className='flex justify-between w-[230px]'>
-                    <span className='relative'>
-                        <div className='absolute bottom-[27.5px] left-[14px] 
-                            h-[150px] sm:h-[200px] border-l-[2px] border-dashed border-[#DEE1E6]'
-                        />
-                        {graphMax * 0.25}
-                    </span>
-                    <span className='relative'>
-                        <div className='absolute bottom-[27.5px] left-[12px] 
-                            h-[150px] sm:h-[200px] border-l-[2px] border-dashed border-[#DEE1E6]'
-                        />
-                        {graphMax * 0.5}
-                    </span>
-                    <span className='relative'>
-                        <div className='absolute bottom-[27.5px] left-[10px] 
-                            h-[150px] sm:h-[200px] border-l-[2px] border-dashed border-[#DEE1E6]'
-                        />
-                        {graphMax * 0.75}
-                    </span>
+                {/* Grid for Dashed Lines & Labels */}
+                <div className="absolute left-0 bottom-0 w-full flex justify-evenly">
+                    {[0.25, 0.5, 0.75].map((value, index) => (
+                        <div key={index} className="relative flex flex-col items-center">
+                            {/* Dashed Line */}
+                            <div className="h-[150px] sm:h-[200px] border-l-2 border-dashed border-[#DEE1E6]" />
+                            {/* Label Below */}
+                            <span className="mt-1">{graphMax * value}</span>
+                        </div>
+                    ))}
                 </div>
-                
-                <span>{graphMax}</span>
 
+                {/* Max Value */}
+                <span className="relative">{graphMax}</span>
             </div>
         </div>
     );

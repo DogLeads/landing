@@ -1,4 +1,3 @@
-import TitleBackground from "../title-background";
 import Title from "../components/title";
 import MarketInsights from "../components/market-insights";
 import InfoCardGrid from "../components/info-card-grid";
@@ -51,7 +50,7 @@ export default function About() {
         },
     ]
     return (
-        <main className="flex min-h-screen flex-col gap-8 sm:gap-10 md:gap-20 items-center py-12 pt-14 sm:pt-24">
+        <main className="flex min-h-screen flex-col gap-8 sm:gap-10 md:gap-20 items-center pb-10 pt-10 sm:pt-20">
 
 
 			{/* title card and CTA */}

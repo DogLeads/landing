@@ -53,8 +53,8 @@ export default function OurTeam() {
             <div className="flex flex-wrap justify-center gap-y-8 sm:gap-y-12 md:gap-y-16 gap-x-14">
                 {teamMembers.map((teamMember, index) => (
                     
-                    <div key={index} className="flex shadow-[12px_12px_16px_-9px_#44A3CF2E] rounded-[65px]
-                        transition-all hover:z-10 duration-500 hover:scale-105 hover:shadow-[12px_12px_16px_0px_#44A3CF2E]">
+                    <div key={index} className="flex shadow-[7px_-2px_40px_#44A3CF2E] rounded-[65px]
+                        transition-all hover:z-10 duration-500 hover:scale-105 hover:shadow-[7px_-2px_40px_#44A3CF2E]">
 
                         <GradientBorderCard borderRadius={15} borderWidth={1} 
                             >
@@ -65,8 +65,7 @@ export default function OurTeam() {
                                 width={0} height={0} sizes="100vh"
                                 className="rounded-full object-cover w-[125px] h-[125px]"
                             />
-                            
-                            
+
                             <div className="flex  flex-col ">
                             <h4>{teamMember.name}</h4>
                             <p className="text-lg">{teamMember.title}</p>

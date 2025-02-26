@@ -70,7 +70,7 @@ export default function WhyChooseUs() {
                     <h2 className=' font-bold leading-[110%]'>
                         Why <GradientText>Renewable Energy</GradientText> Contractors Choose Our Product
                     </h2>
-                    <div className='flex gap-6 sm:gap-8 pt-8 text-[#858585] text-sm overflow-hidden overflow-ellipsis'>
+                    <div className='flex gap-6 sm:gap-8 pt-8 text-[#858585] dark:text-gray-300 text-sm overflow-hidden overflow-ellipsis'>
                         <LinkCustom href={'/#Find Leads'}>
                             Find Leads
                         </LinkCustom>
@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
                     </div>
                 </div>
                 
-                <div className='flex w-full flex-col justify-center items-center sm:flex-row sm:justify-evenly sm:items-start'>
+                <div className='flex w-full flex-col justify-center items-center md:flex-row md:justify-evenly md:items-start'>
                     {/* Scrolling Text Section */}
                     <div className='sm:mr-8'>
                         {infoBlocks.map((block, index) => {
@@ -104,7 +104,7 @@ export default function WhyChooseUs() {
                                 ref={ref}
                                 id={block.caption}
                                 key={index}
-                                className="flex flex-col max-w-[490px] justify-center sm:min-h-[100vh]"
+                                className="flex flex-col max-w-[490px] justify-center md:justify-center md:min-h-[100vh]"
                             >
                                 <div className="flex items-center gap-1">
                                     <Image className="w-4 h-4"
@@ -119,7 +119,7 @@ export default function WhyChooseUs() {
                                 <h3 className="text-2xl md:text-3xl lg:text-[32px] py-4 lg:py-6">{block.title}</h3>
                                 <p>{block.text}</p>
 
-                                <Image className="object-contain w-[630px] rounded-15 mb-16 mt-6 visible sm:invisible"
+                                <Image className="object-contain w-[630px] rounded-15 mb-16 mt-6 visible md:invisible"
                                     src={block.image}
                                     alt={block.title}
                                     width={630}
@@ -131,7 +131,7 @@ export default function WhyChooseUs() {
                 </div>
 
                 {/* Sticky Image Section */}
-                <div className="sticky top-[30%] md:top-[20%] hidden sm:block bg-accent-gradient-opaque rounded-[18pt] max-w-[630px] w-full">
+                <div className="sticky top-[25%] hidden sm:block bg-accent-gradient-opaque rounded-[18pt] min-w-[400px] max-w-[630px] w-full">
                     <div className="relative w-full aspect-[630/592] max-w-[630px]">
                         <motion.div
                             className='absolute inset-0'

@@ -6,6 +6,7 @@ const config: Config = {
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
+	darkMode: 'class', // enables class based dark mode
 	theme: {
 		extend: {
 			colors: {
@@ -27,20 +28,15 @@ const config: Config = {
 				lg: '0 4px 10px #000',
 			},
 			backgroundColor: {
-				dark: "#001228",
+				dark: "#212529",
 				"dark-secondary": "#4B5563",
 				light: "#EEF2F6",
 				purple: "#EDEEFC",
 				blue: "#E6F1FD",
 			},
 			backgroundImage: {
-				// "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 				"gradient-radial":
 					"radial-gradient(50% 50% at 50% 50%, #011F29 0%, #000711 100%)",
-				"gradient-conic":
-					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-				"home-gradient":
-					"radial-gradient(257.3% 141.42% at 0% 0%, #F9F3F1 0%, #F7EEDE 100%)",
 				"accent-gradient":
 					"linear-gradient(110.41deg, #4A89DB -2.4%, #39C77B 105.71%)",
 				"accent-gradient-opaque":

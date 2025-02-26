@@ -48,7 +48,7 @@ export default function Testimonials() {
 
                     <div key={index}
                         className="flex flex-col flex-1 min-w-[250px] max-w-[413px] h-full min-h-[270px] md:min-h-[300px] mb-8
-                        rounded-[20px] py-8 px-6 justify-between bg-[#EEF2F6] gap-3 md:gap-4
+                        rounded-[20px] py-8 px-6 justify-between bg-[#EEF2F6] dark:bg-[#292d32] gap-3 md:gap-4
                         group transition-all hover:z-10 duration-500 hover:scale-105 hover:shadow-md">
 
                         <div className="flex flex-col gap-4 md:gap-6">
@@ -75,7 +75,7 @@ export default function Testimonials() {
                                 />
                             </div>
 
-                            <div className="text-black">
+                            <div>
                                 <p className="text-[14px] sm:text-[16px] md:text-[18px] font-bold">
                                     {testimonial.name}
                                 </p>

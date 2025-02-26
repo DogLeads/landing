@@ -130,7 +130,7 @@ export default function MarketInsights() {
             className="relative flex flex-col justify-center items-center w-full
             bg-[url(/job-openings/solar-panels.webp)] bg-cover bg-center px-4"
             >
-            <div className="bg-[#ECF5FF] opacity-[0.93] w-full h-full absolute z-10"></div>
+            <div className="bg-[#ECF5FF] dark:bg-[#212529] opacity-[0.93] w-full h-full absolute z-10"></div>
             <h2 className="mt-16 mb-8 text-center z-20">Market Insight</h2>
 
             {/* Navigation Text Links */}
@@ -138,12 +138,12 @@ export default function MarketInsights() {
                 {cardsInfo.map((cardInfo, index) => (
                 <div key={index} className="group">
                     <button
-                    onClick={() => setCurrentIndex(index)}
-                    className={`text-small md:text-sm group-hover:text-primary ${
-                        currentIndex === index ? "text-primary" : "text-gray-700"
-                    }`}
+                        onClick={() => setCurrentIndex(index)}
+                        className={`text-small md:text-sm group-hover:text-primary 
+                            ${currentIndex === index ? "text-primary" : "text-gray-700 dark:text-gray-200"}`
+                        }
                     >
-                    {cardInfo.link}
+                        {cardInfo.link}
                     </button>
                     <svg
                     className={`${
@@ -164,7 +164,7 @@ export default function MarketInsights() {
             {/* Active Card */}
             <motion.div
                 key={currentIndex} // Ensures animation triggers on key change
-                className="flex flex-col md:flex-row mb-20 bg-[#D7DBF6] px-[30px] md:px-[108px] py-16 rounded-15 max-w-[1280px] gap-5 z-20"
+                className="flex flex-col md:flex-row mb-20 bg-[#D7DBF6] px-[30px] md:px-16 lg:px-[108px] py-10 md:py-16 rounded-15 max-w-[1280px] gap-5 z-20 text-[#212529]"
                 style={{ backgroundColor: cardsInfo[currentIndex].color }}
                 variants={cardVariants}
                 initial="initial"
@@ -172,21 +172,21 @@ export default function MarketInsights() {
                 exit="exit"
             >
                 <div className="flex gap-5 items-center">
-                <div className="flex flex-col md:gap-8 lg:gap-12 max-w-[522px]">
-                    <h4 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter">
-                    {cardsInfo[currentIndex].title}
-                    </h4>
-                    <p>
-                    {currentIndex > barGraphsData.length - 1
-                        ? lineGraphData.description
-                        : cardsInfo[currentIndex].description}
-                    </p>
-                </div>
+                    <div className="flex flex-col md:gap-8 lg:gap-12 max-w-[522px]">
+                        <h4 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tighter">
+                        {cardsInfo[currentIndex].title}
+                        </h4>
+                        <p>
+                        {currentIndex > barGraphsData.length - 1
+                            ? lineGraphData.description
+                            : cardsInfo[currentIndex].description}
+                        </p>
+                    </div>
                 </div>
                 {currentIndex < barGraphsData.length ? (
-                <BarGraphCard barGraphData={barGraphsData[currentIndex]} />
+                    <BarGraphCard barGraphData={barGraphsData[currentIndex]} />
                 ) : (
-                <LineGraphCard lineGraphData={lineGraphData} />
+                    <LineGraphCard lineGraphData={lineGraphData} />
                 )}
             </motion.div>
         </section>

@@ -38,7 +38,7 @@ export default function Footer() {
 
 					{/* Links */}
 					<div className="flex flex-wrap sm:justify-center sm:items-center sm:mx-6 gap-x-6 sm:gap-x-8 mb-8 sm:mt-0
-						font-medium text-sm gap-y-4 text-gray-700">
+						font-medium text-sm gap-y-4 text-gray-700 dark:text-gray-300">
 						<Link title="Features" 
 							href={"/about/#deploy"} className="hover:text-gray-500">
 							Features
@@ -98,12 +98,12 @@ export default function Footer() {
 				</div>
 				
 				{/* Divider */}
-				<hr className="flex h-[1px] border-black border-solid w-full max-w-[1180px] mb-8 mt-10" />
+				<hr className="flex h-[1px] border-black dark:border-white border-solid w-full max-w-[1180px] mb-8 mt-10" />
 				
 				{/* Bottom Row */}
 				<div className={`flex justify-between gap-y-4 items-center 
 					w-full max-w-[1180px] flex-wrap-reverse 
-					text-gray-700 font-medium text-body ${urbanist.className}`}>	
+					text-gray-700 dark:text-gray-300 font-medium text-body ${urbanist.className}`}>	
 					
 					<p className=" ">
 						© 2024. All rights reserved.

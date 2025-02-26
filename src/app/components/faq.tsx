@@ -38,7 +38,7 @@ function FAQItem({ question, answers, link, isOpen, onToggle }: FAQItemProps) {
             <div className={isOpen ? "pt-2 md:pt-4 lg:pt-6" : ""}>
                 {isOpen &&
                 answers.map((ans, index) => (
-                    <span key={index} className="text-grey2 text-sm sm:text-base tracking-tighter">
+                    <span key={index} className="text-grey2 dark:text-gray-300 text-sm sm:text-base tracking-tighter">
                     {ans}
                     {link && index === 0 ? (
                         <Link href={link} className="text-[#4A89DB] font-semibold hover:opacity-85">
@@ -58,30 +58,30 @@ export default function Faq() {
 
     const faqData: Omit<FAQItemProps, "isOpen" | "onToggle">[] = [
         {
-        question: "What is the pricing?",
-        answers: [
-            "ClimateForge offers reasonably priced services, catering to both individuals and enterprises. You can find detailed pricing information in the ",
-            " on this website. The options are designed to be affordable and accessible, whether you're looking for individual solutions or enterprise-level services. ",
-        ],
-        link: "/#pricing",
+            question: "What is the pricing?",
+            answers: [
+                "ClimateForge offers reasonably priced services, catering to both individuals and enterprises. You can find detailed pricing information in the ",
+                " on this website. The options are designed to be affordable and accessible, whether you're looking for individual solutions or enterprise-level services. ",
+            ],
+            link: "/#pricing",
         },
         {
-        question: "What services do you offer?",
-        answers: [
-            "Our solutions are tailored for the residential and commercial sectors, offering tools to monitor, report, and reduce emissions by deploying physical equipment in the perfect locations, which can help organizations meet their carbon reduction goals.",
-        ],
-        },
+            question: "What services do you offer?",
+            answers: [
+                "Our solutions are tailored for the residential and commercial sectors, offering tools to monitor, report, and reduce emissions by deploying physical equipment in the perfect locations, which can help organizations meet their carbon reduction goals.",
+            ],
+            },
         {
-        question: "Where do you operate?",
-        answers: [
-            "ClimateForge typically operates globally or in regions with strong energy driven economies or industrial sectors. Our services are available wherever there is a demand for advanced environmental management, energy upgrade deployment, emissions monitoring and where we find friendly environmental policies for renewable energy. Our current focus is the US and the EU.",
-        ],
-        },
+            question: "Where do you operate?",
+            answers: [
+                "ClimateForge typically operates globally or in regions with strong energy driven economies or industrial sectors. Our services are available wherever there is a demand for advanced environmental management, energy upgrade deployment, emissions monitoring and where we find friendly environmental policies for renewable energy. Our current focus is the US and the EU.",
+            ],
+            },
         {
-        question: "How can I be sure about the compliance and safety?",
-        answers: [
-            "ClimateForge ensures compliance and safety through rigorous energy monitoring and reporting tools, which help organizations adhere to environmental regulations. Our solutions include real-time data analytics and visualization to provide a clear picture of emissions and energy potential, ensuring that companies can proactively manage and reduce their teams and environmental impact while making profits.",
-        ],
+            question: "How can I be sure about the compliance and safety?",
+            answers: [
+                "ClimateForge ensures compliance and safety through rigorous energy monitoring and reporting tools, which help organizations adhere to environmental regulations. Our solutions include real-time data analytics and visualization to provide a clear picture of emissions and energy potential, ensuring that companies can proactively manage and reduce their teams and environmental impact while making profits.",
+            ],
         },
     ];
 

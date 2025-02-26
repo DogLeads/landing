@@ -13,7 +13,8 @@ export default function Demo({ videoSrc }: DemoProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <section className="group rounded-2xl transition-opacity group-hover:opacity-90 h-full max-w-[1280px] w-full pt-20" style={{backgroundImage: "linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(92, 177, 140, 0.2035), rgba(70, 146, 184, 0.506), rgba(91, 88, 199, 0.33))"}}>
+        <section className="group rounded-2xl transition-opacity group-hover:opacity-90 h-full max-w-[1280px] w-full pt-20" 
+            style={{backgroundImage: "linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(92, 177, 140, 0.2035), rgba(70, 146, 184, 0.506), rgba(91, 88, 199, 0.33))"}}>
             {/* Image with Play Button */}
             <div className="relative flex justify-center items-center px-4 md:px-8" >
                 <Image
@@ -40,7 +41,7 @@ export default function Demo({ videoSrc }: DemoProps) {
                     >
                         <motion.button  
                             whileTap={{ scale: 0.9 }}
-                            className="bg-[#9FC5DB]/35 rounded-full transition-transform flex items-center justify-center w-[76px] h-[76px] pl-1"
+                            className="bg-[#9FC5DB]/35 dark:bg-dark/35 rounded-full transition-transform flex items-center justify-center w-[76px] h-[76px] pl-1"
                         >
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
                                 <path 

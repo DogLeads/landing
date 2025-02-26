@@ -1,5 +1,4 @@
 import ButtonCustom from './button-custom';
-import GradientButton from './gradient-button';
 import GradientText from "./gradient-text";
 import { ReactNode } from "react";
 

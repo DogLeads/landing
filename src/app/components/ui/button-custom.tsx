@@ -29,27 +29,27 @@ export default function ButtonCustom(props: ButtonProps) {
         <button onClick={onClick} type={type}
             disabled={disabled} 
             className={`${disabled ? 'cursor-not-allowed opacity-50' : null} 
-            ${className} relative group hover:bg-[#ffffffbc] hover:bg-accent-gradient-opaque hover:overflow-clip border border-solid border-primary transition-all`
+            ${className} relative group hover:bg-[#ffffffbc] dark:hover:bg-[#212529] hover:bg-accent-gradient-opaque hover:overflow-clip border border-solid border-primary dark:border-white transition-all`
             }
             style={{ 
                 height: buttonHeight, 
                 borderRadius: buttonRadius, 
                 
             }}>
-            <span className="font-bold text-primary text-[16px] md:text-[18px] px-5 ">
+            <span className="font-bold text-primary dark:text-white text-[16px] md:text-[18px] px-5 ">
                 {children}
             </span>
         </button>
         :
         <button onClick={onClick} disabled={disabled} type={type}
             className={`${disabled ? 'cursor-not-allowed opacity-50' : null} 
-                ${className} relative group bg-primary hover:bg-[#ffffffbc] border border-solid border-primary transition-all hover:overflow-clip hover:bg-accent-gradient-opaque`}
+                ${className} relative group bg-primary hover:bg-[#ffffffbc] border border-primary inset-0 dark:hover:border-transparent dark:hover:bg-accent-gradient transition-color hover:overflow-clip hover:bg-accent-gradient-opaque`}
                 style={{ 
                     height: buttonHeight, 
                     borderRadius: buttonRadius,
 
                 }}>
-                <span className="flex justify-center items-center font-bold text-white text-[16px] md:text-[18px] px-5 group-hover:text-primary">
+                <span className="flex justify-center items-center font-bold text-white text-[16px] md:text-[18px] px-5 group-hover:text-primary dark:group-hover:text-white">
                     {children}
                 </span>
                 
