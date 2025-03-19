@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 export default function Home() {
 
 	return (
-		<main className="flex min-h-screen flex-col gap-8 sm:gap-10 md:gap-20 items-center pt-14 sm:pt-24 ">
+		<main className="flex min-h-screen flex-col gap-8 sm:gap-10 md:gap-4 items-center pt-14 sm:pt-24 ">
 			{/* Background Image */}
 			
 

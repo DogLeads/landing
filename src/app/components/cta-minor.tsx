@@ -1,9 +1,12 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from 'next/navigation';
 import GradientBorderBox from './ui/gradient-border-box';
 import { motion, Variants } from "framer-motion";
 import GradientText from "./ui/gradient-text";
 import ButtonCustom from "./ui/button-custom";
+import InquiryForm from './inquiry-form';
+import { useState } from 'react';
 
 const leftVariants: Variants = {
     offscreen: {
@@ -118,13 +121,15 @@ function InfoBox({svgSrc, title, text}: InfoBoxProps) {
 
 
 export default function CtaMinor() {
-    
+    const router = useRouter();
+    const [isInquiryFormOpen, setInquiryFormOpen] = useState(false);
+
     return (
         <section className="relative flex flex-col justify-center items-center w-full max-w-[1440px] p-4 ">
             
             {/** CTA container - gradient border, absolute position*/}
                 <div className="flex relative flex-col justify-center items-center text-center 
-                    px-4 sm:px-12 max-h-[488px] py-8 min-h-[500px] ">
+                    px-4 sm:px-12 max-h-[488px] pt-0 pb-8 min-h-[500px] ">
                     
                     <h2 className=" relative leading-snug">
                         Empowering <GradientText>American Businesses</GradientText> to Sell More Energy Upgrades
@@ -133,10 +138,15 @@ export default function CtaMinor() {
                         Identify the optimal residential heating and cooling for efficiency, deploy Solar, HVAC, and energy storage systems and make real money faster.
                     </p>
                     <div className="flex gap-[18px]">
-                        <ButtonCustom onClick={() => window.open('https://calendly.com/giovanni-climateforge-qttf', '_blank', 'noopener,noreferrer')} width={154}>
+                        <ButtonCustom onClick={() => setInquiryFormOpen(true)} width={154}>
                             Contact Us
                         </ButtonCustom>
-                        <ButtonCustom variant="outline" onClick={() => window.open('https://calendly.com/giovanni-climateforge-qttf', '_blank', 'noopener,noreferrer')} width={154}>
+                        <InquiryForm isOpen={isInquiryFormOpen} setIsOpen={setInquiryFormOpen} />
+                        <ButtonCustom
+                            variant="outline"
+                            onClick={() => router.push('/careers')}
+                            width={154}
+                        >
                             Join Now
                         </ButtonCustom>
                     </div>

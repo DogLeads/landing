@@ -92,7 +92,7 @@ export default function WhyChooseUs() {
                     <motion.div
                         id={block.caption}
                         key={index}
-                        className={`flex flex-col sm:flex-row items-center gap-8 mb-32 scroll-mt-32`}
+                        className={`flex flex-col sm:flex-row items-center gap-8 mb-24 last:mb-0 scroll-mt-32`}
                         whileInView={{
                             transition: { duration: 0.2 },
                         }}
